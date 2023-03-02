@@ -2,22 +2,46 @@
  * Copyright (c) 2023 Digital Bazaar, Inc. All rights reserved.
  */
 export const controller = 'https://example.edu/issuers/565049';
+const publicKeyMultibase = 'zDnaekGZTbQBerwcehBSXLqAg6s55hVEBms1zFy89VHXtJSa9';
+const secretKeyMultibase = 'z42tqZ5smVag3DtDhjY9YfVwTMyVHW6SCHJi2ZMrD23DGYS3';
+const id = `${controller}#${publicKeyMultibase}`;
 
 export const mockPublicEcdsaMultikey = {
   '@context': 'https://w3id.org/security/multikey/v1',
   type: 'Multikey',
   controller,
-  id: controller + '#',
-  publicKeyMultibase: ''
+  id,
+  publicKeyMultibase
 };
 
 export const ecdsaMultikeyKeyPair = {
   '@context': 'https://w3id.org/security/multikey/v1',
   type: 'Multikey',
   controller,
-  id: controller + '#',
-  publicKeyMultibase: '',
-  secretKeyMultibase: ''
+  id,
+  publicKeyMultibase,
+  secretKeyMultibase
+};
+
+export const ecdsaSecp256KeyPair = {
+  type: 'EcdsaSecp256r1VerificationKey2019',
+  controller,
+  publicKeyMultibase,
+  secretKeyMultibase
+};
+
+export const ecdsaSecp384KeyPair = {
+  type: 'EcdsaSecp384r1VerificationKey2019',
+  controller,
+  publicKeyMultibase,
+  secretKeyMultibase
+};
+
+export const ecdsaSecp521KeyPair = {
+  type: 'EcdsaSecp521r1VerificationKey2019',
+  controller,
+  publicKeyMultibase,
+  secretKeyMultibase
 };
 
 export const controllerDocEcdsaMultikey = {
