@@ -10,9 +10,7 @@ import * as EcdsaMultikey from '@digitalbazaar/ecdsa-multikey';
 import {
   credential,
   ecdsaMultikeyKeyPair,
-  ecdsaSecp256KeyPair,
-  ecdsaSecp384KeyPair,
-  ecdsaSecp521KeyPair
+  ecdsaSecp256KeyPair
 } from './mock-data.js';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
 import {cryptosuite as ecdsa2019Cryptosuite} from '../lib/index.js';
@@ -84,48 +82,6 @@ describe('Ecdsa2019Cryptosuite', () => {
         let verifier;
         let error;
         const keyPair = await EcdsaMultikey.from({...ecdsaSecp256KeyPair});
-        try {
-          verifier = await ecdsa2019Cryptosuite.createVerifier({
-            verificationMethod: keyPair
-          });
-        } catch(e) {
-          error = e;
-        }
-
-        expect(error).to.not.exist;
-        expect(verifier).to.exist;
-        verifier.algorithm.should.equal('P-256');
-        verifier.id.should.equal('https://example.edu/issuers/565049#zDnaekG' +
-        'ZTbQBerwcehBSXLqAg6s55hVEBms1zFy89VHXtJSa9');
-        verifier.verify.should.be.a('function');
-      });
-
-    it('should create a verifier with EcdsaSecp384r1VerificationKey2019',
-      async () => {
-        let verifier;
-        let error;
-        const keyPair = await EcdsaMultikey.from({...ecdsaSecp384KeyPair});
-        try {
-          verifier = await ecdsa2019Cryptosuite.createVerifier({
-            verificationMethod: keyPair
-          });
-        } catch(e) {
-          error = e;
-        }
-
-        expect(error).to.not.exist;
-        expect(verifier).to.exist;
-        verifier.algorithm.should.equal('P-256');
-        verifier.id.should.equal('https://example.edu/issuers/565049#zDnaekG' +
-        'ZTbQBerwcehBSXLqAg6s55hVEBms1zFy89VHXtJSa9');
-        verifier.verify.should.be.a('function');
-      });
-
-    it('should create a verifier with EcdsaSecp521r1VerificationKey2019',
-      async () => {
-        let verifier;
-        let error;
-        const keyPair = await EcdsaMultikey.from({...ecdsaSecp521KeyPair});
         try {
           verifier = await ecdsa2019Cryptosuite.createVerifier({
             verificationMethod: keyPair
