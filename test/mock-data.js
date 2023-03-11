@@ -30,20 +30,6 @@ export const ecdsaSecp256KeyPair = {
   secretKeyMultibase
 };
 
-export const ecdsaSecp384KeyPair = {
-  type: 'EcdsaSecp384r1VerificationKey2019',
-  controller,
-  publicKeyMultibase,
-  secretKeyMultibase
-};
-
-export const ecdsaSecp521KeyPair = {
-  type: 'EcdsaSecp521r1VerificationKey2019',
-  controller,
-  publicKeyMultibase,
-  secretKeyMultibase
-};
-
 export const controllerDocEcdsaMultikey = {
   '@context': [
     'https://www.w3.org/ns/did/v1',
