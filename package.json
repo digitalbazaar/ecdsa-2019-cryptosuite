@@ -1,6 +1,6 @@
 {
   "name": "@digitalbazaar/ecdsa-2019-cryptosuite",
-  "version": "1.0.0",
+  "version": "1.0.1-0",
   "description": "An ECDSA-2019 Data Integrity cryptosuite for use with jsonld-signatures.",
   "homepage": "https://github.com/digitalbazaar/ecdsa-2019-cryptosuite",
   "repository": {
