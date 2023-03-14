@@ -14,7 +14,7 @@
     "lib/**/*.js"
   ],
   "dependencies": {
-    "@digitalbazaar/ecdsa-multikey": "github:digitalbazaar/ecdsa-multikey#fix-sign-and-verify-issues",
+    "@digitalbazaar/ecdsa-multikey": "^1.1.1",
     "jsonld": "^8.1.0"
   },
   "devDependencies": {
