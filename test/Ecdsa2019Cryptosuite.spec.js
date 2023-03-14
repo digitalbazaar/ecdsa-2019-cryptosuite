@@ -94,7 +94,7 @@ describe('Ecdsa2019Cryptosuite', () => {
         expect(verifier).to.exist;
         verifier.algorithm.should.equal('P-256');
         verifier.id.should.equal('https://example.edu/issuers/565049#zDnaekG' +
-        'ZTbQBerwcehBSXLqAg6s55hVEBms1zFy89VHXtJSa9');
+          'ZTbQBerwcehBSXLqAg6s55hVEBms1zFy89VHXtJSa9');
         verifier.verify.should.be.a('function');
       });
 
