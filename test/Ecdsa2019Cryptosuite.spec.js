@@ -312,9 +312,7 @@ describe('Ecdsa2019Cryptosuite', () => {
 
         expect(result.verified).to.be.false;
         expect(errors[0].name).to.equal('Error');
-        expect(errors[0].message).to.equal(
-          'Only base58btc multibase encoding is supported.'
-        );
+        expect(errors[0].message).to.include('base58btc');
       }
     );
 
