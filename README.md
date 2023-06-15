@@ -81,15 +81,13 @@ const unsignedCredential = {
 
 // create the keypair to use when signing
 const controller = 'https://example.edu/issuers/565049';
-// FIXME: Replace with proper public and secret key multibase bytes
 const keyPair = await EcdsaMultikey.from({
   '@context': 'https://w3id.org/security/multikey/v1',
+  id: 'https://example.edu/issuers/565049#zDnaekGZTbQBerwcehBSXLqAg6s55hVEBms1zFy89VHXtJSa9',
   type: 'Multikey',
-  controller,
-  id: controller + '#z6MkwXG2WjeQnNxSoynSGYU8V9j3QzP3JSqhdmkHc6SaVWoT',
-  publicKeyMultibase: 'z6MkwXG2WjeQnNxSoynSGYU8V9j3QzP3JSqhdmkHc6SaVWoT',
-  secretKeyMultibase: 'zrv3rbPamVDGvrm7LkYPLWYJ35P9audujKKsWn3x29EUiGwwhdZQd' +
-    '1iHhrsmZidtVALBQmhX3j9E5Fvx6Kr29DPt6LH'
+  controller: 'https://example.edu/issuers/565049',
+  publicKeyMultibase: 'zDnaekGZTbQBerwcehBSXLqAg6s55hVEBms1zFy89VHXtJSa9',
+  secretKeyMultibase: 'z42tqZ5smVag3DtDhjY9YfVwTMyVHW6SCHJi2ZMrD23DGYS3'
 });
 
 // export public key and add to document loader
@@ -119,7 +117,6 @@ const signedCredential = await jsigs.sign(unsignedCredential, {
   documentLoader
 });
 
-// FIXME: Replace signed VC with proof from ecdsa-2019 and ecdsa-multikey
 // results in the following signed VC
 {
   "@context": [
@@ -142,13 +139,12 @@ const signedCredential = await jsigs.sign(unsignedCredential, {
     "alumniOf": "Example University"
   },
   "proof": {
-    "type": "DataIntegrityProof",
-    "created": "2022-09-06T12:33:46Z",
-    "verificationMethod": "https://example.edu/issuers/565049#z6MkwXG2WjeQnNxSoynSGYU8V9j3QzP3JSqhdmkHc6SaVWoT",
-    "cryptosuite": "ecdsa-2019",
-    "proofPurpose": "assertionMethod",
-    "proofValue": "zT2U2xRCkXVPbkk4kKmemPa9zXSV7wfngQVq9uXjo3GgqZs6Te2NFLH8dRKQaqQfNhsGxEdmYkjJPy1EPkK67KnJ"
-  }
+  "type": "DataIntegrityProof",
+  "created": "2023-03-01T21:29:24Z",
+  "verificationMethod": "https://example.edu/issuers/565049#zDnaekGZTbQBerwcehBSXLqAg6s55hVEBms1zFy89VHXtJSa9",
+  "cryptosuite": "ecdsa-2019",
+  "proofPurpose": "assertionMethod",
+  "proofValue": "z3MrzbvzXyBNDd9KNCJQHzHrct7LMi9Vs4TatKA81fjvVq3dbGsLE4VMyfNnx42Bdoq1ALHAXbB2fDtmioNagHbcZ"
 }
 ```
 
