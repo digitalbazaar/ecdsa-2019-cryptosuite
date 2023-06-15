@@ -139,12 +139,13 @@ const signedCredential = await jsigs.sign(unsignedCredential, {
     "alumniOf": "Example University"
   },
   "proof": {
-  "type": "DataIntegrityProof",
-  "created": "2023-03-01T21:29:24Z",
-  "verificationMethod": "https://example.edu/issuers/565049#zDnaekGZTbQBerwcehBSXLqAg6s55hVEBms1zFy89VHXtJSa9",
-  "cryptosuite": "ecdsa-2019",
-  "proofPurpose": "assertionMethod",
-  "proofValue": "z3MrzbvzXyBNDd9KNCJQHzHrct7LMi9Vs4TatKA81fjvVq3dbGsLE4VMyfNnx42Bdoq1ALHAXbB2fDtmioNagHbcZ"
+    "type": "DataIntegrityProof",
+    "created": "2023-03-01T21:29:24Z",
+    "verificationMethod": "https://example.edu/issuers/565049#zDnaekGZTbQBerwcehBSXLqAg6s55hVEBms1zFy89VHXtJSa9",
+    "cryptosuite": "ecdsa-2019",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z3MrzbvzXyBNDd9KNCJQHzHrct7LMi9Vs4TatKA81fjvVq3dbGsLE4VMyfNnx42Bdoq1ALHAXbB2fDtmioNagHbcZ"
+  }
 }
 ```
 
