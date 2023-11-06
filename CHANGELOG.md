@@ -1,6 +1,6 @@
 # @digitalbazaar/ecdsa-2019-cryptosuite Changelog
 
-## 2.0.0 - 2023-11-TBD
+## 2.0.0 - 2023-11-06
 
 ### Changed
 - **BREAKING**: Update `requiredAlgorithm` to be an array that includes
