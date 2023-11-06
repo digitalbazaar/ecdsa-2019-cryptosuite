@@ -24,7 +24,7 @@ describe('Ecdsa2019Cryptosuite', () => {
     it('it should have proper exports', async () => {
       should.exist(ecdsa2019Cryptosuite);
       ecdsa2019Cryptosuite.name.should.equal('ecdsa-2019');
-      ecdsa2019Cryptosuite.requiredAlgorithm.should.equal('P-256');
+      ecdsa2019Cryptosuite.requiredAlgorithm.should.eql(['P-256', 'P-384']);
       ecdsa2019Cryptosuite.canonize.should.be.a('function');
       ecdsa2019Cryptosuite.createVerifier.should.be.a('function');
     });
@@ -206,8 +206,9 @@ describe('Ecdsa2019Cryptosuite', () => {
       }
 
       const errorMessage = `The signer's algorithm "${signer.algorithm}" ` +
-        `does not match the required algorithm for the cryptosuite ` +
-        `"${ecdsa2019Cryptosuite.requiredAlgorithm}".`;
+        `is not a supported algorithm for the cryptosuite. The supported ` +
+        `algorithms are: ` +
+        `"${ecdsa2019Cryptosuite.requiredAlgorithm.join(', ')}".`;
 
       expect(error).to.exist;
       expect(error.message).to.equal(errorMessage);
