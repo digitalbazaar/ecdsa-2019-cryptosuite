@@ -1,5 +1,12 @@
 # @digitalbazaar/ecdsa-2019-cryptosuite Changelog
 
+## 3.0.0 - 2023-11-dd
+
+### Changed
+- **BREAKING**: Use `data-integrity` v2 context.
+- Use `@digitalbazaar/data-integrity@2.0` and
+  `@digitalbazaar/data-integrity-context@2.0` in test.
+
 ## 2.0.0 - 2023-11-06
 
 ### Changed
