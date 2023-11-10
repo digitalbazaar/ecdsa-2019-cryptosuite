@@ -125,7 +125,7 @@ const signedCredential = await jsigs.sign(unsignedCredential, {
       "AlumniCredential": "https://schema.org#AlumniCredential",
       "alumniOf": "https://schema.org#alumniOf"
     },
-    "https://w3id.org/security/data-integrity/v1"
+    "https://w3id.org/security/data-integrity/v2"
   ],
   "id": "http://example.edu/credentials/1872",
   "type": [
@@ -144,7 +144,7 @@ const signedCredential = await jsigs.sign(unsignedCredential, {
     "verificationMethod": "https://example.edu/issuers/565049#zDnaekGZTbQBerwcehBSXLqAg6s55hVEBms1zFy89VHXtJSa9",
     "cryptosuite": "ecdsa-2019",
     "proofPurpose": "assertionMethod",
-    "proofValue": "z3MrzbvzXyBNDd9KNCJQHzHrct7LMi9Vs4TatKA81fjvVq3dbGsLE4VMyfNnx42Bdoq1ALHAXbB2fDtmioNagHbcZ"
+    "proofValue": "z4LrGHvkF2AVw5gEiyHrnMJUyE51GrWxGiGE1sEi44DVbPP8kdSLcogQZCygJhoZT6gk5odGHjKyYccPFKKNFWaf1"
   }
 }
 ```
